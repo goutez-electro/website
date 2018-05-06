@@ -44,10 +44,18 @@ a.arrow {
 	margin-right:10px;
 }
 
+#fixed-bg {
+    height: 100%;
+    width: 100%;
+    position: fixed !important;
+    z-index: -1;
+    top: 0;
+}
+
 #headband {
-	background: url(images/head-band-2018.png) 50% 0 fixed;
+	background: url(images/head-band-2018.png) no-repeat 50% 0 fixed;
 	-webkit-background-size: cover; /* pour anciens Chrome et Safari */
-	background-size : cover ;
+	background-size : auto ;
 	height: auto;  
 	margin: 0 auto; 
 	width: 100%; 
@@ -63,7 +71,8 @@ a.arrow {
 }
 
 #concept { 
-	background: url(images/public.jpg) 80% 0 fixed;
+	background: url(images/public.jpg) no-repeat 80% 0 fixed;
+	background-size : auto ;
 	height: auto;  
 	margin: 0 auto; 
 	width: 100%; 
@@ -73,10 +82,9 @@ a.arrow {
 }
 
 #benevolat { 
-	background: url(images/benevoles2.jpg) 80% 0 fixed;
+	background: url(images/benevoles2.jpg) no-repeat 80% 0 fixed;
 	/* opacity: 0.9; */
-	-webkit-background-size: cover; /* pour anciens Chrome et Safari */
-	background-size : cover ;
+	background-size : auto ;
 	height: auto;
 	margin: 0 auto; 
 	width: 100%; 
@@ -90,10 +98,9 @@ a.arrow {
 }
 
 #programmation { 
-	background: url(images/artiste.jpg) 80% 0 fixed;
-	 opacity: 0.9;
-	-webkit-background-size: cover; /* pour anciens Chrome et Safari */
-	background-size : cover ;
+	background: url(images/artiste.jpg) no-repeat 80% 0 fixed;
+	opacity: 0.9;
+	background-size : auto ;
 	height: auto;
 	margin: 0 auto; 
 	width: 100%; 
@@ -103,7 +110,7 @@ a.arrow {
 }
 
 #coming { 
-	background: url(images/more.png) 50% 0 fixed; 
+	background: url(images/more.png) no-repeat 50% 0 fixed; 
 	height: auto;
 	margin: 0 auto; 
 	width: 110%; 
