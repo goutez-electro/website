@@ -72,6 +72,7 @@ a.arrow {
 
 #concept { 
 	background: url(images/public.jpg) no-repeat 80% 0 fixed;
+	-webkit-background-size: cover; /* pour anciens Chrome et Safari */
 	background-size : auto ;
 	height: auto;  
 	margin: 0 auto; 
@@ -83,6 +84,7 @@ a.arrow {
 
 #benevolat { 
 	background: url(images/benevoles2.jpg) no-repeat 80% 0 fixed;
+	-webkit-background-size: cover; /* pour anciens Chrome et Safari */
 	/* opacity: 0.9; */
 	background-size : auto ;
 	height: auto;
@@ -99,6 +101,7 @@ a.arrow {
 
 #programmation { 
 	background: url(images/artiste.jpg) no-repeat 80% 0 fixed;
+	-webkit-background-size: cover; /* pour anciens Chrome et Safari */
 	opacity: 0.9;
 	background-size : auto ;
 	height: auto;
@@ -111,6 +114,7 @@ a.arrow {
 
 #coming { 
 	background: url(images/more.png) no-repeat 50% 0 fixed; 
+	-webkit-background-size: cover; /* pour anciens Chrome et Safari */
 	height: auto;
 	margin: 0 auto; 
 	width: 110%; 
