@@ -45,7 +45,7 @@ a.arrow {
 }
 
 .parallax {
-	background-position: 50% 50%;
+	background-position: 50% 0;
 	background-attachment: scroll;
 	background-size: auto;
 	-moz-background-size: auto;
@@ -71,11 +71,13 @@ a.arrow {
 
 #concept { 
 	background-image: url("images/public.jpg");
+	background-attachment: fixed;
 	padding: 10% 0;
 }
 
 #benevolat { 
 	background-image: url("images/benevoles2.jpg");
+	background-attachment: fixed;
 	padding: 15% 0;
 }
 
@@ -86,12 +88,14 @@ a.arrow {
 
 #programmation { 
 	background-image: url("images/artiste.jpg");
+	background-attachment: fixed;
 	 opacity: 0.9;
 	padding: 15% 0;
 }
 
 #coming { 
 	background-image: url("images/more.png");
+	background-attachment: fixed;
 	background-size: 5%;
 	padding: 10% 0 2% 0;
 }
