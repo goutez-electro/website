@@ -46,7 +46,7 @@ a.arrow {
 
 .parallax {
 	background-position: 50% 0;
-	background-attachment: scroll;
+	background-attachment: fixed;
 	background-size: auto;
 	-moz-background-size: auto;
 	-webkit-background-size: auto;
@@ -59,7 +59,6 @@ a.arrow {
 
 #headband {
 	background-image: url("images/head-band-2018.png");
-	background-attachment: fixed;
 	padding: 500px 0;
 }
 
@@ -71,13 +70,11 @@ a.arrow {
 
 #concept { 
 	background-image: url("images/public.jpg");
-	background-attachment: fixed;
 	padding: 10% 0;
 }
 
 #benevolat { 
 	background-image: url("images/benevoles2.jpg");
-	background-attachment: fixed;
 	padding: 15% 0;
 }
 
@@ -88,14 +85,12 @@ a.arrow {
 
 #programmation { 
 	background-image: url("images/artiste.jpg");
-	background-attachment: fixed;
-	 opacity: 0.9;
+	opacity: 0.9;
 	padding: 15% 0;
 }
 
 #coming { 
 	background-image: url("images/more.png");
-	background-attachment: fixed;
 	background-size: 5%;
 	padding: 10% 0 2% 0;
 }
