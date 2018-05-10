@@ -59,6 +59,7 @@ a.arrow {
 
 #headband {
 	background-image: url("images/head-band-2018.png");
+	background-attachment: fixed;
 	padding: 500px 0;
 }
 
@@ -70,12 +71,12 @@ a.arrow {
 
 #concept { 
 	background-image: url("images/public.jpg");
-	padding: 120px 0;
+	padding: 10% 0;
 }
 
 #benevolat { 
 	background-image: url("images/benevoles2.jpg");
-	padding: 200px 0;
+	padding: 15% 0;
 }
 
 .benevoleMotiv {
@@ -86,13 +87,13 @@ a.arrow {
 #programmation { 
 	background-image: url("images/artiste.jpg");
 	 opacity: 0.9;
-	padding: 200px 0;
+	padding: 15% 0;
 }
 
 #coming { 
 	background-image: url("images/more.png");
 	background-size: 5%;
-	padding: 90px 0 10px 0;
+	padding: 10% 0 2% 0;
 }
 
 #mapid {
