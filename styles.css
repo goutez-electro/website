@@ -73,6 +73,11 @@ a.arrow {
 	padding: 10% 0;
 }
 
+.carousel-control-next, .carousel-control-prev {
+	top:25% !important;
+	height: 50% !important;
+}
+
 #benevolat { 
 	background-image: url("images/benevoles2.jpg");
 	padding: 15% 0;
@@ -80,7 +85,7 @@ a.arrow {
 
 .benevoleMotiv {
 	margin: 0 auto;
-	max-width: 600px !important;
+	max-width: 620px !important;
 }
 
 #programmation { 

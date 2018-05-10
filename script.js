@@ -15,7 +15,16 @@ $(document).ready(function(){
 		}); // end window scroll
 	});// end section function
 	 loadMap();
-}); // close out script
+	 youtubePlayer();
+	 carouselNextSlideAutoplay();
+});
+
+function youtubePlayer() {
+	var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+}
 
 // Function that validates email address through a regular expression.
 function validateEmail(address) {
@@ -48,4 +57,52 @@ function loadMap() {
 	markerWH.bindPopup("Warehouse");
 	var markerF = L.marker([47.20055, -1.57355], {icon: pinF}).addTo(map);
 	markerF.bindPopup("Ferrailleur");
+}
+
+function onYouTubeIframeAPIReady() {
+	players = new Array();
+	$(".embedYoutube").each(function() {
+		this.id;
+		var player = new YT.Player(this.id, {
+			videoId: this.id,
+			playerVars: {'modestbranding': 1}	,
+			events: {
+				'onStateChange': onPlayerStateChange
+			}
+		});
+		players.push(player);
+	});
+}
+
+function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING) {
+        stopVideo(event.target.a.id);
+    }
+}
+
+function stopVideo(player_id) {
+	players.forEach(function(player) {
+		var curPlayId = player.getVideoData()['video_id'];
+		if (curPlayId != player_id) {
+			player.pauseVideo();
+		}
+	});
+}
+
+function playVideo(player_id) {
+	players.forEach(function(player) {
+		var curPlayId = player.getVideoData()['video_id'];
+		if (curPlayId == player_id) {
+			player.playVideo();
+		}
+	});
+}
+
+function carouselNextSlideAutoplay(){
+	var callBacK = function (evt) {
+		var activeId = $(evt.target).find('.carousel-inner > .carousel-item.active .embedYoutube').attr('id');
+		playVideo(activeId);
+	}
+	$("#carouselVideoCSM").on('slid.bs.carousel', callBacK);
+	$("#carouselVideoJDB").on('slid.bs.carousel', callBacK);
 }
