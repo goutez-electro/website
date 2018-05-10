@@ -45,12 +45,12 @@ a.arrow {
 }
 
 .parallax {
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: cover;
-	-moz-background-size: cover;
-	-webkit-background-size: cover;
-	-o-background-size: cover;
+	background-position: 50% 50%;
+	background-attachment: scroll;
+	background-size: auto;
+	-moz-background-size: auto;
+	-webkit-background-size: auto;
+	-o-background-size: auto;
 	height: auto;  
 	margin: 0 auto;
 	width: 100%; 
@@ -70,13 +70,12 @@ a.arrow {
 
 #concept { 
 	background-image: url("images/public.jpg");
-	background-size: 120%;
-	padding: 150px 0;
+	padding: 120px 0;
 }
 
 #benevolat { 
 	background-image: url("images/benevoles2.jpg");
-	padding: 300px 0;
+	padding: 200px 0;
 }
 
 .benevoleMotiv {
@@ -87,12 +86,11 @@ a.arrow {
 #programmation { 
 	background-image: url("images/artiste.jpg");
 	 opacity: 0.9;
-	padding: 300px 0;
+	padding: 200px 0;
 }
 
 #coming { 
 	background-image: url("images/more.png");
-	background-repeat: repeat;
 	background-size: 5%;
 	padding: 90px 0 10px 0;
 }
