@@ -45,18 +45,18 @@ function loadMap() {
 			popupAnchor:  [3, -52]
 		}
 	});
-	var pinJDB = new PinIcon({iconUrl: 'images/map/pinJDB.png'}),
-    pinCSM = new PinIcon({iconUrl: 'images/map/pinCSM.png'}),
-	pinWH = new PinIcon({iconUrl: 'images/map/pinWH.png'}),
-	pinF = new PinIcon({iconUrl: 'images/map/pinF.png'});
+	var pinJDB = new PinIcon({iconUrl: 'images/map/pinJDB.png'});
+    // pinCSM = new PinIcon({iconUrl: 'images/map/pinCSM.png'}),
+	// pinWH = new PinIcon({iconUrl: 'images/map/pinWH.png'}),
+	// pinF = new PinIcon({iconUrl: 'images/map/pinF.png'});
 	var markerJDB = L.marker([47.207443, -1.5658337], {icon: pinJDB}).addTo(map);
 	markerJDB.bindPopup("Jardin des Berges");
-	var markerCSM = L.marker([47.206243,  -1.567234], {icon: pinCSM}).addTo(map);
-	markerCSM.bindPopup("Cale des Sous-Marins");
-	var markerWH = L.marker([47.201259, -1.572899], {icon: pinWH}).addTo(map);
-	markerWH.bindPopup("Warehouse");
-	var markerF = L.marker([47.20055, -1.57355], {icon: pinF}).addTo(map);
-	markerF.bindPopup("Ferrailleur");
+	// var markerCSM = L.marker([47.206243,  -1.567234], {icon: pinCSM}).addTo(map);
+	// markerCSM.bindPopup("Cale des Sous-Marins");
+	// var markerWH = L.marker([47.201259, -1.572899], {icon: pinWH}).addTo(map);
+	// markerWH.bindPopup("Warehouse");
+	// var markerF = L.marker([47.20055, -1.57355], {icon: pinF}).addTo(map);
+	// markerF.bindPopup("Ferrailleur");
 }
 
 function onYouTubeIframeAPIReady() {
