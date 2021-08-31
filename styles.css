@@ -117,3 +117,15 @@ footer {
 .gotolineResponsive {
 	display: inline-block;	
 }
+
+.arobase::before {
+    content: "\000040";
+    font-size: inherit !important;
+}
+.arobase span {
+	font-size: 1px;
+    font-size: 0.1px;
+    text-indent: -999px;
+    width: 1px;
+    overflow: hidden;
+}
