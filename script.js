@@ -37,7 +37,7 @@ function loadMap() {
 	var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
     var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
     var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 20, attribution: osmAttrib});
-    map.setView(new L.LatLng(47.2039125, -1.5672418),15);
+    map.setView(new L.LatLng(47.204, -1.570),14);
 	map.addLayer(osm);
 	var PinIcon = L.Icon.extend({
 		options: {
@@ -46,17 +46,17 @@ function loadMap() {
 		}
 	});
 	var pinJDB = new PinIcon({iconUrl: 'images/map/pinJDB.png'});
-    // pinCSM = new PinIcon({iconUrl: 'images/map/pinCSM.png'}),
-	// pinWH = new PinIcon({iconUrl: 'images/map/pinWH.png'}),
-	// pinF = new PinIcon({iconUrl: 'images/map/pinF.png'});
+    var pinCSM = new PinIcon({iconUrl: 'images/map/pinCSM.png'});
+	var pinWH = new PinIcon({iconUrl: 'images/map/pinWH.png'});
+	var pinM = new PinIcon({iconUrl: 'images/map/pinF.png'});
 	var markerJDB = L.marker([47.207443, -1.5658337], {icon: pinJDB}).addTo(map);
 	markerJDB.bindPopup("Jardin des Berges");
-	// var markerCSM = L.marker([47.206243,  -1.567234], {icon: pinCSM}).addTo(map);
-	// markerCSM.bindPopup("Cale des Sous-Marins");
-	// var markerWH = L.marker([47.201259, -1.572899], {icon: pinWH}).addTo(map);
-	// markerWH.bindPopup("Warehouse");
-	// var markerF = L.marker([47.20055, -1.57355], {icon: pinF}).addTo(map);
-	// markerF.bindPopup("Ferrailleur");
+	var markerCSM = L.marker([47.206243,  -1.567234], {icon: pinCSM}).addTo(map);
+	markerCSM.bindPopup("Cale des Sous-Marins");
+	var markerWH = L.marker([47.201259, -1.572899], {icon: pinWH}).addTo(map);
+	markerWH.bindPopup("Warehouse");
+	var markerM = L.marker([47.197542, -1.589129], {icon: pinM}).addTo(map);
+	markerM.bindPopup("Macadam");
 }
 
 function onYouTubeIframeAPIReady() {
