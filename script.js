@@ -35,7 +35,7 @@ function validateEmail(address) {
 function loadMap() {
 	var map = L.map('mapid');
 	var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-    var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+    var osmAttrib='© <a href="http://openstreetmap.org">OpenStreetMap</a>';
     var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 20, attribution: osmAttrib});
     map.setView(new L.LatLng(47.204, -1.570),14);
 	map.addLayer(osm);
@@ -49,6 +49,7 @@ function loadMap() {
     var pinCSM = new PinIcon({iconUrl: 'images/map/pinCSM.png'});
 	var pinWH = new PinIcon({iconUrl: 'images/map/pinWH.png'});
 	var pinM = new PinIcon({iconUrl: 'images/map/pinF.png'});
+	var pinGTJ = new PinIcon({iconUrl: 'images/map/pinGTJ.png'});
 	var markerJDB = L.marker([47.207443, -1.5658337], {icon: pinJDB}).addTo(map);
 	markerJDB.bindPopup("Jardin des Berges");
 	var markerCSM = L.marker([47.206243,  -1.567234], {icon: pinCSM}).addTo(map);
@@ -57,6 +58,8 @@ function loadMap() {
 	markerWH.bindPopup("Warehouse");
 	var markerM = L.marker([47.197542, -1.589129], {icon: pinM}).addTo(map);
 	markerM.bindPopup("Macadam");
+	var markerGTJ = L.marker([47.20521, -1.56919], {icon: pinGTJ}).addTo(map);
+	markerGTJ.bindPopup("Grue Titan Jaune");
 }
 
 function onYouTubeIframeAPIReady() {
