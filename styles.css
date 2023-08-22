@@ -44,6 +44,18 @@ a.arrow {
 	margin-right:10px;
 }
 
+#countDownContainer {
+	width: 40vw;
+}
+
+#countDownContainer p {
+	text-align: center;
+	font-weight: bolder;
+	color:darkslategray;
+	font-size: 3vh;
+	text-shadow: #FFF 0 0 10px;
+}
+
 .parallax {
 	background-position: 50% 0;
 	background-attachment: fixed;
