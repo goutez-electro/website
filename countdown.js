@@ -26,7 +26,7 @@ function countDown() {
   if (distance < 0) {
     clearInterval(x);
     if (countDownDateEnd - now > 0) {
-        result = "Le Goûtez Electronique à lieu en ce moment !";
+        result = "Le Goûtez Electronique a lieu en ce moment !";
     } else {
         result = "";
     }
