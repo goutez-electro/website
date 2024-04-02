@@ -1,6 +1,6 @@
 // Set the date we're counting down to
-var countDownDateStart = new Date("Sep 2, 2023 17:00:00 GMT+02").getTime();
-var countDownDateEnd = new Date("Sep 2, 2023 23:00:00 GMT+02").getTime();
+var countDownDateStart = new Date("Jun 2, 2024 14:00:00 GMT+02").getTime();
+var countDownDateEnd = new Date("Jun 2, 2024 20:00:00 GMT+02").getTime();
 
 $(function() {
     countDown();

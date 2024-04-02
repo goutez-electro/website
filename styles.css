@@ -51,9 +51,9 @@ a.arrow {
 #countDownContainer p {
 	text-align: center;
 	font-weight: bolder;
-	color:darkslategray;
+	color:white;
 	font-size: 3vh;
-	text-shadow: #FFF 0 0 10px;
+	text-shadow: #e1e0e0 0 0 10px;
 }
 
 .parallax {
@@ -70,8 +70,20 @@ a.arrow {
 }
 
 #headband {
-	background-image: url("images/HEADER_WEB_GE2024.png");
+	background-size: cover;
 	padding: 500px 0;
+  }
+
+@media (orientation: landscape) {
+  #headband {
+	background-image: url("images/HEADER_WEB_GE2024.webp");
+  }
+}
+
+@media (orientation: portrait) {
+  #headband {
+	background-image: url("images/HEADER_MOBILE_GE2024.webp");
+  }
 }
 
 .center {
