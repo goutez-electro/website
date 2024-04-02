@@ -74,6 +74,18 @@ a.arrow {
 	padding: 500px 0;
   }
 
+@supports ( -webkit-touch-callout : none) {
+  #headband {
+	background-attachment:scroll
+  }
+}
+	
+@supports not ( -webkit-touch-callout : none) {
+  #headband {
+	background-attachment: fixed;
+  }
+}
+
 @media (orientation: landscape) {
   #headband {
 	background-image: url("images/HEADER_WEB_GE2024.webp");
