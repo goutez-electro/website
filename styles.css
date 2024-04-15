@@ -135,9 +135,8 @@ a.arrow {
 }
 
 #coming { 
-	background-image: url("images/more.png");
-	background-size: 5%;
-	padding: 10% 0 2% 0;
+	background-image: url(noise.svg);
+	padding: 2% 0 2% 0;
 }
 
 #mapid {
