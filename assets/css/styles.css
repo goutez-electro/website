@@ -88,13 +88,13 @@ a.arrow {
 
 @media (orientation: landscape) {
   #headband {
-	background-image: url("images/HEADER_WEB_GE2024.webp");
+	background-image: url("/assets/images/HEADER_WEB_GE2024.webp");
   }
 }
 
 @media (orientation: portrait) {
   #headband {
-	background-image: url("images/HEADER_MOBILE_GE2024.webp");
+	background-image: url("/assets/images/HEADER_MOBILE_GE2024.webp");
   }
 }
 
@@ -105,7 +105,7 @@ a.arrow {
 }
 
 #concept { 
-	background-image: url("images/public.jpg");
+	background-image: url("/assets/images/public.jpg");
 	padding: 10% 0;
 }
 
@@ -119,7 +119,7 @@ a.arrow {
 }
 
 #benevolat { 
-	background-image: url("images/benevoles2.jpg");
+	background-image: url("/assets/images/benevoles2.jpg");
 	padding: 15% 0;
 }
 
@@ -129,13 +129,13 @@ a.arrow {
 }
 
 #programmation { 
-	background-image: url("images/artiste.jpg");
+	background-image: url("/assets/images/artiste.jpg");
 	opacity: 0.9;
 	padding: 15% 0;
 }
 
 #coming { 
-	background-image: url(noise.svg);
+	background-image: url("/assets/images/noise.svg");
 	padding: 2% 0 2% 0;
 }
 

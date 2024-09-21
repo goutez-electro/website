@@ -45,11 +45,11 @@ function loadMap() {
 			popupAnchor:  [3, -52]
 		}
 	});
-	var pinJDB = new PinIcon({iconUrl: 'images/map/pinJDB.png'});
-    var pinCSM = new PinIcon({iconUrl: 'images/map/pinCSM.png'});
-	var pinWH = new PinIcon({iconUrl: 'images/map/pinWH.png'});
-	var pinM = new PinIcon({iconUrl: 'images/map/pinF.png'});
-	var pinGTJ = new PinIcon({iconUrl: 'images/map/pinGTJ.png'});
+	var pinJDB = new PinIcon({iconUrl: '/assets/images/map/pinJDB.png'});
+    var pinCSM = new PinIcon({iconUrl: '/assets/images/map/pinCSM.png'});
+	var pinWH = new PinIcon({iconUrl: '/assets/images/map/pinWH.png'});
+	var pinM = new PinIcon({iconUrl: '/assets/images/map/pinF.png'});
+	var pinGTJ = new PinIcon({iconUrl: '/assets/images/map/pinGTJ.png'});
 	var markerJDB = L.marker([47.207443, -1.5658337], {icon: pinJDB}).addTo(map);
 	markerJDB.bindPopup("Jardin des Berges");
 	var markerCSM = L.marker([47.206243,  -1.567234], {icon: pinCSM}).addTo(map);
