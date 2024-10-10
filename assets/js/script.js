@@ -1,111 +1,112 @@
-$(document).ready(function(){
-	// cache the window object
-	$window = $(window);
-	$('section[data-type="background"]').each(function(){
-		// declare the variable to affect the defined data-type
-		var $scroll = $(this);
-		$(window).scroll(function() {
-			// HTML5 proves useful for helping with creating JS functions!
-			// also, negative value because we're scrolling upwards
-			var yPos = -($window.scrollTop() / $scroll.data('speed'));
-			// background position
-			var coords = '50% '+ yPos + 'px';
-			// move the background
-			$scroll.css({ backgroundPosition: coords });    
-		}); // end window scroll
-	});// end section function
-	 loadMap();
-	 youtubePlayer();
-	 carouselNextSlideAutoplay();
+document.addEventListener('DOMContentLoaded', function () {
+  // cache the window object
+  const windowObj = window;
+
+  // Background parallax effect
+  const scrollElements = document.querySelectorAll(
+    'section[data-type="background"]',
+  );
+  for (const scrollElement of scrollElements) {
+    window.addEventListener('scroll', function () {
+      const yPos = -(windowObj.scrollY / scrollElement.dataset.speed);
+      const coords = '50% ' + yPos + 'px';
+      scrollElement.style.backgroundPosition = coords;
+    });
+  }
+
+  // Load the map
+  loadMap();
+
+  // Load YouTube API
+  let tag = document.createElement('script');
+  tag.src = 'https://www.youtube.com/iframe_api';
+  let firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // Initialize carousel autoplay functionality
+  carouselNextSlideAutoplay('#swiper-container1');
+  carouselNextSlideAutoplay('#swiper-container2');
 });
 
-function youtubePlayer() {
-	var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+let players = {};
+
+// YouTube API Ready function
+function onYouTubeIframeAPIReady() {
+  const embedYoutubeElements = document.querySelectorAll('.embedYoutube');
+  for (const element of embedYoutubeElements) {
+    const videoId = element.dataset.videoId || element.id; // Use data attribute if available, otherwise fallback to id
+    players[element.id] = new YT.Player(videoId, {
+      videoId: videoId,
+      playerVars: {
+        controls: 0,
+        color: 'white',
+        // 'modestbranding': 1 // deprecated, does nothing https://developers.google.com/youtube/player_parameters#release_notes_08_15_2023
+      },
+    });
+  }
 }
 
 // Function that validates email address through a regular expression.
 function validateEmail(address) {
-	var filter = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
-	return filter.test(address);
+  const filter = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+  return filter.test(address);
 }
 
+// Map loading function
 function loadMap() {
-	var map = L.map('mapid');
-	var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-    var osmAttrib='© <a href="http://openstreetmap.org">OpenStreetMap</a>';
-    var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 20, attribution: osmAttrib});
-    map.setView(new L.LatLng(47.204, -1.570),14);
-	map.addLayer(osm);
-	var PinIcon = L.Icon.extend({
-		options: {
-			iconAnchor:   [22, 55],
-			popupAnchor:  [3, -52]
-		}
-	});
-	var pinJDB = new PinIcon({iconUrl: '/assets/images/map/pinJDB.png'});
-    var pinCSM = new PinIcon({iconUrl: '/assets/images/map/pinCSM.png'});
-	var pinWH = new PinIcon({iconUrl: '/assets/images/map/pinWH.png'});
-	var pinM = new PinIcon({iconUrl: '/assets/images/map/pinF.png'});
-	var pinGTJ = new PinIcon({iconUrl: '/assets/images/map/pinGTJ.png'});
-	var markerJDB = L.marker([47.207443, -1.5658337], {icon: pinJDB}).addTo(map);
-	markerJDB.bindPopup("Jardin des Berges");
-	var markerCSM = L.marker([47.206243,  -1.567234], {icon: pinCSM}).addTo(map);
-	markerCSM.bindPopup("Cale des Sous-Marins");
-	var markerWH = L.marker([47.201259, -1.572899], {icon: pinWH}).addTo(map);
-	markerWH.bindPopup("Warehouse");
-	var markerM = L.marker([47.197542, -1.589129], {icon: pinM}).addTo(map);
-	markerM.bindPopup("Macadam");
-	var markerGTJ = L.marker([47.20521, -1.56919], {icon: pinGTJ}).addTo(map);
-	markerGTJ.bindPopup("Grue Titan Jaune");
+  const map = L.map('mapid');
+  const osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+  const osmAttrib = '© <a href="http://openstreetmap.org">OpenStreetMap</a>';
+  const osm = new L.TileLayer(osmUrl, {
+    minZoom: 8,
+    maxZoom: 20,
+    attribution: osmAttrib,
+  });
+  map.setView(new L.LatLng(47.204, -1.57), 14);
+  map.addLayer(osm);
+
+  const PinIcon = L.Icon.extend({
+    options: {
+      iconAnchor: [22, 55],
+      popupAnchor: [3, -52],
+    },
+  });
+
+  const pinJDB = new PinIcon({ iconUrl: '/assets/images/map/pinJDB.png' });
+  const pinCSM = new PinIcon({ iconUrl: '/assets/images/map/pinCSM.png' });
+  const pinWH = new PinIcon({ iconUrl: '/assets/images/map/pinWH.png' });
+  const pinM = new PinIcon({ iconUrl: '/assets/images/map/pinF.png' });
+  const pinGTJ = new PinIcon({ iconUrl: '/assets/images/map/pinGTJ.png' });
+
+  const markerJDB = L.marker([47.207443, -1.5658337], { icon: pinJDB }).addTo(
+    map,
+  );
+  markerJDB.bindPopup('Jardin des Berges');
+
+  const markerCSM = L.marker([47.206243, -1.567234], { icon: pinCSM }).addTo(
+    map,
+  );
+  markerCSM.bindPopup('Cale des Sous-Marins');
+
+  const markerWH = L.marker([47.201259, -1.572899], { icon: pinWH }).addTo(map);
+  markerWH.bindPopup('Warehouse');
+
+  const markerM = L.marker([47.197542, -1.589129], { icon: pinM }).addTo(map);
+  markerM.bindPopup('Macadam');
+
+  const markerGTJ = L.marker([47.20521, -1.56919], { icon: pinGTJ }).addTo(map);
+  markerGTJ.bindPopup('Grue Titan Jaune');
 }
 
-function onYouTubeIframeAPIReady() {
-	players = new Array();
-	$(".embedYoutube").each(function() {
-		this.id;
-		var player = new YT.Player(this.id, {
-			videoId: this.id,
-			playerVars: {'modestbranding': 1}	,
-			events: {
-				'onStateChange': onPlayerStateChange
-			}
-		});
-		players.push(player);
-	});
-}
-
-function onPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.PLAYING) {
-        stopVideo(event.target.a.id);
+// Carousel autoplay function
+function carouselNextSlideAutoplay(selector) {
+  const swiperEl = document.querySelector(selector).swiper;
+  swiperEl.on('slideChange', (event) => {
+    for (const playerId in players) {
+      players[playerId].pauseVideo();
     }
-}
-
-function stopVideo(player_id) {
-	players.forEach(function(player) {
-		var curPlayId = player.getVideoData()['video_id'];
-		if (curPlayId != player_id) {
-			player.pauseVideo();
-		}
-	});
-}
-
-function playVideo(player_id) {
-	players.forEach(function(player) {
-		var curPlayId = player.getVideoData()['video_id'];
-		if (curPlayId == player_id) {
-			player.playVideo();
-		}
-	});
-}
-
-function carouselNextSlideAutoplay(){
-	var callBacK = function (evt) {
-		var activeId = $(evt.target).find('.carousel-inner > .carousel-item.active .embedYoutube').attr('id');
-		playVideo(activeId);
-	}
-	$("#carouselVideoCSM").on('slid.bs.carousel', callBacK);
-	$("#carouselVideoJDB").on('slid.bs.carousel', callBacK);
+    if (event && event.slides && Object.keys(players).length > 0 && players[event.slides[event.activeIndex].firstElementChild.id]) {
+      players[event.slides[event.activeIndex].firstElementChild.id].playVideo();
+    }
+  });
 }
