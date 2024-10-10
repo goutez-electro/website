@@ -183,3 +183,7 @@ swiper-slide iframe {
 :root {
 	--swiper-navigation-color: white;
 }
+
+swiper-container {
+	--swiper-navigation-size: 25px;
+}

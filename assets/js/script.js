@@ -35,7 +35,7 @@ function onYouTubeIframeAPIReady() {
   const embedYoutubeElements = document.querySelectorAll('.embedYoutube');
   for (const element of embedYoutubeElements) {
     const videoId = element.dataset.videoId || element.id; // Use data attribute if available, otherwise fallback to id
-    players[element.id] = new YT.Player(element.id, {
+    players[element.id] = new YT.Player(videoId, {
       videoId: videoId,
       playerVars: {
         controls: 0,
@@ -101,16 +101,12 @@ function loadMap() {
 // Carousel autoplay function
 function carouselNextSlideAutoplay(selector) {
   const swiperEl = document.querySelector(selector).swiper;
-  let initializing = true;
-  console.log(swiperEl);
   swiperEl.on('slideChange', (event) => {
-    if (initializing) {
-      initializing = false;
-      return;
-    }
     for (const playerId in players) {
       players[playerId].pauseVideo();
     }
-    players[event.slides[event.activeIndex].firstElementChild.id].playVideo();
+    if (event && event.slides && Object.keys(players).length > 0 && players[event.slides[event.activeIndex].firstElementChild.id]) {
+      players[event.slides[event.activeIndex].firstElementChild.id].playVideo();
+    }
   });
 }
