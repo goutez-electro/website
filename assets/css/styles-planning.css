@@ -1,0 +1,19 @@
+td.check-badge {
+    text-align: center;
+}
+td.check-badge span {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #4CAF50; /* Vert */
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.chameau {
+    text-transform: lowercase;
+}
+.chameau::first-letter {
+    text-transform: uppercase;
+}
