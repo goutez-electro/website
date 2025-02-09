@@ -3,7 +3,7 @@ td.check-badge {
 }
 td.check-badge span {
     display: inline-block;
-    padding: 4px 8px;
+    padding: 1px 3px;
     background-color: #4CAF50; /* Vert */
     color: white;
     font-weight: bold;
@@ -11,9 +11,7 @@ td.check-badge span {
     text-align: center;
 }
 
-.chameau {
-    text-transform: lowercase;
-}
-.chameau::first-letter {
-    text-transform: uppercase;
+table.dataTable th {
+    white-space: normal !important; /* Permet le retour à la ligne */
+    word-wrap: break-word; /* Coupe les mots longs si besoin */
 }
