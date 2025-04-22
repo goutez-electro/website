@@ -16,7 +16,7 @@ body {
 
 .navbar.navbar-dark.bg-dark {
 	background: rgba(100,100,100,0.4) !important;
-} 
+}
 
 .navbar-dark .navbar-nav .nav-link {
 	color: white !important;
@@ -63,10 +63,10 @@ a.arrow {
 	-moz-background-size: auto;
 	-webkit-background-size: auto;
 	-o-background-size: auto;
-	height: auto;  
+	height: auto;
 	margin: 0 auto;
-	width: 100%; 
-	position: relative; 	
+	width: 100%;
+	position: relative;
 }
 
 #headband {
@@ -79,7 +79,7 @@ a.arrow {
 	background-attachment:scroll
   }
 }
-	
+
 @supports not ( -webkit-touch-callout : none) {
   #headband {
 	background-attachment: fixed;
@@ -88,7 +88,7 @@ a.arrow {
 
 @media (orientation: landscape) {
   #headband {
-	background-image: url("/assets/images/HEADER_WEB_GE2024.webp");
+	background-image: url("/assets/images/HEADER_WEB_GE2025.png");
   }
 }
 
@@ -104,7 +104,7 @@ a.arrow {
 	text-align: center;
 }
 
-#concept { 
+#concept {
 	background-image: url("/assets/images/public.jpg");
 	padding: 10% 0;
 }
@@ -118,7 +118,7 @@ a.arrow {
 	margin-bottom: 5%;
 }
 
-#benevolat { 
+#benevolat {
 	background-image: url("/assets/images/benevoles2.jpg");
 	padding: 15% 0;
 }
@@ -128,13 +128,13 @@ a.arrow {
 	max-width: 620px !important;
 }
 
-#programmation { 
+#programmation {
 	background-image: url("/assets/images/artiste.jpg");
 	opacity: 0.9;
 	padding: 15% 0;
 }
 
-#coming { 
+#coming {
 	background-image: url("/assets/images/noise.svg");
 	padding: 2% 0 2% 0;
 }
@@ -146,11 +146,11 @@ a.arrow {
 }
 
 footer {
-	padding-top: 10px; 
+	padding-top: 10px;
 }
 
 .gotolineResponsive {
-	display: inline-block;	
+	display: inline-block;
 }
 
 .arobase::before {

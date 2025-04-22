@@ -9,8 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
   for (const scrollElement of scrollElements) {
     window.addEventListener('scroll', function () {
       const yPos = -(windowObj.scrollY / scrollElement.dataset.speed);
-      const coords = '50% ' + yPos + 'px';
-      scrollElement.style.backgroundPosition = coords;
+      scrollElement.style.backgroundPosition = '50% ' + yPos + 'px';
     });
   }
 
@@ -72,24 +71,22 @@ function loadMap() {
     },
   });
 
-  const pinJDB = new PinIcon({ iconUrl: '/assets/images/map/pinJDB.png' });
+  //const pinJDB = new PinIcon({ iconUrl: '/assets/images/map/pinJDB.png' });
   const pinCSM = new PinIcon({ iconUrl: '/assets/images/map/pinCSM.png' });
-  const pinWH = new PinIcon({ iconUrl: '/assets/images/map/pinWH.png' });
+  //const pinWH = new PinIcon({ iconUrl: '/assets/images/map/pinWH.png' });
   const pinM = new PinIcon({ iconUrl: '/assets/images/map/pinF.png' });
   const pinGTJ = new PinIcon({ iconUrl: '/assets/images/map/pinGTJ.png' });
 
-  const markerJDB = L.marker([47.207443, -1.5658337], { icon: pinJDB }).addTo(
-    map,
-  );
-  markerJDB.bindPopup('Jardin des Berges');
+  //const markerJDB = L.marker([47.207443, -1.5658337], { icon: pinJDB }).addTo(map);
+  //markerJDB.bindPopup('Jardin des Berges');
 
   const markerCSM = L.marker([47.206243, -1.567234], { icon: pinCSM }).addTo(
     map,
   );
   markerCSM.bindPopup('Cale des Sous-Marins');
 
-  const markerWH = L.marker([47.201259, -1.572899], { icon: pinWH }).addTo(map);
-  markerWH.bindPopup('Warehouse');
+  //const markerWH = L.marker([47.201259, -1.572899], { icon: pinWH }).addTo(map);
+  //markerWH.bindPopup('Warehouse');
 
   const markerM = L.marker([47.197542, -1.589129], { icon: pinM }).addTo(map);
   markerM.bindPopup('Macadam');
