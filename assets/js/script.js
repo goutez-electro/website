@@ -96,6 +96,7 @@ function loadMap() {
 }
 
 // Carousel autoplay function
+/*
 function carouselNextSlideAutoplay(selector) {
   const swiperEl = document.querySelector(selector).swiper;
   swiperEl.on('slideChange', (event) => {
@@ -107,3 +108,4 @@ function carouselNextSlideAutoplay(selector) {
     }
   });
 }
+*/
