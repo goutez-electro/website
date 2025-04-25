@@ -51,9 +51,9 @@ a.arrow {
 #countDownContainer p {
 	text-align: center;
 	font-weight: bolder;
-	color:white;
+	color:rgb(56,32,81);
 	font-size: 3vh;
-	text-shadow: #e1e0e0 0 0 10px;
+	text-shadow:  rgb(251,109,41) 0 0 10px;
 }
 
 .parallax {

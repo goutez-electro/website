@@ -58,8 +58,10 @@ fetch(gSheetUrl)
                     targets: "_all",
                     className: "not-mobile",
                     createdCell: function(td, cellData) {
-                        if (cellData === "x") {
+                        if (cellData === "TRUE") {
                             $(td).addClass("check-badge").html('<span>✔</span>'); // Badge check ✔
+                        } else if (cellData === "FALSE") {
+                            $(td).text("");
                         }
                     }
                 }
