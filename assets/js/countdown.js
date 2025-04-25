@@ -1,7 +1,5 @@
 // Liste des événements avec des dates de début et de fin
 var events = [
-  { start: new Date("Apr 26, 2025 19:24:00 GMT+02").getTime(), end: new Date("Jun 8, 2025 20:00:00 GMT+02").getTime() },
-
   { start: new Date("Jun 8, 2025 14:00:00 GMT+02").getTime(), end: new Date("Jun 8, 2025 20:00:00 GMT+02").getTime() },
   { start: new Date("Sep 14, 2025 14:00:00 GMT+02").getTime(), end: new Date("Sep 14, 2025 20:00:00 GMT+02").getTime() },
   { start: new Date("Sep 27, 2025 17:00:00 GMT+02").getTime(), end: new Date("Sep 27, 2025 23:00:00 GMT+02").getTime() },
