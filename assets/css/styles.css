@@ -134,6 +134,8 @@ a.arrow {
 	padding: 15% 0;
 }
 
+/* svg generated from https://www.fffuel.co/nnnoise/
+*/
 #coming {
 	background-image: url("/assets/images/noise.svg");
 	padding: 2% 0 2% 0;
