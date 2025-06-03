@@ -20,6 +20,9 @@
             <button class="nav-link active" id="nav-plan-tab" data-bs-toggle="tab" data-bs-target="#nav-plan"
                     type="button" role="tab" aria-controls="nav-plan-elec" aria-selected="true">&#x1F5FA; Plan Général
             </button>
+            <button class="nav-link" id="nav-plan_bar-tab" data-bs-toggle="tab" data-bs-target="#nav-plan_bar" type="button"
+                    role="tab" aria-controls="nav-plan_bar" aria-selected="false">&#x1F37A; Plan Bar
+            </button>
             <button class="nav-link" id="nav-plan-elec-tab" data-bs-toggle="tab" data-bs-target="#nav-plan-elec"
                     type="button" role="tab" aria-controls="nav-plan-elec" aria-selected="true">&#x1F50C; Plan Électrique
             </button>
@@ -55,6 +58,9 @@
                         Plan Général</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="switchTab('nav-plan_bar')" data-bs-dismiss="offcanvas">&#x1F37A; Plan Bar</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#" onclick="switchTab('nav-plan-elec')" data-bs-dismiss="offcanvas">&#x1F50C;
                         Plan Électrique</a>
                 </li>
@@ -77,6 +83,15 @@
     <div class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active second-row" id="nav-plan" role="tabpanel" aria-labelledby="nav-plan-tab">
             <iframe src="/assets/plans/25_GEJGT_plan.pdf" width="100%" height="800px" style="border:none;"></iframe>
+        </div>
+        <div class="tab-pane fade second-row" id="nav-plan_bar" role="tabpanel" aria-labelledby="nav-plan_bar-tab">
+            <!-- PLAN BAR JARDIN DES BERGES -->
+            <!--img src="/assets/plans/GEJDB_plan_bar.svg" height="100%"-->
+            <!-- PLAN BAR GRUE JAUNE -->
+            <img src="https://docs.google.com/drawings/d/e/2PACX-1vTmd9JZREDzOu3P2PcZavqiCsgMN3-CpJhLpgzif_NoluTEZp2JbD5DnPQXW_g7qEN2JPgNW9VZWaW0/pub?w=1299&amp;h=800" width="100%">
+            <!-- PLAN BAR CALE SOUS-MARIN -->
+            <!--img src="https://docs.google.com/drawings/d/1rYqvpzvloE8AiyinQVopNCIlJHrYEo5dshwdJlouWMk/pub?w=1299&amp;h=800"
+                 width="100%"-->
         </div>
         <div class="tab-pane fade second-row" id="nav-plan-elec" role="tabpanel" aria-labelledby="nav-plan-elec-tab">
             <iframe src="/assets/plans/25_GE_GJT-plan-elec.pdf" width="100%" height="800px" style="border:none;"></iframe>
