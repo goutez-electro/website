@@ -1,8 +1,8 @@
 // Liste des événements avec des dates de début et de fin
 var events = [
-  { start: new Date("Jun 8, 2025 14:00:00 GMT+02").getTime(), end: new Date("Jun 8, 2025 20:00:00 GMT+02").getTime() },
-  { start: new Date("Sep 14, 2025 14:00:00 GMT+02").getTime(), end: new Date("Sep 14, 2025 20:00:00 GMT+02").getTime() },
-  { start: new Date("Sep 27, 2025 17:00:00 GMT+02").getTime(), end: new Date("Sep 27, 2025 23:00:00 GMT+02").getTime() },
+  { start: new Date("Jun 14, 2026 14:00:00 GMT+02").getTime(), end: new Date("Jun 14, 2026 20:00:00 GMT+02").getTime() },
+  { start: new Date("Sep 6, 2026 14:00:00 GMT+02").getTime(), end: new Date("Sep 6, 2026 20:00:00 GMT+02").getTime() },
+  { start: new Date("Sep 26, 2026 17:00:00 GMT+02").getTime(), end: new Date("Sep 26, 2026 23:00:00 GMT+02").getTime() },
 ];
 
 $(function() {
